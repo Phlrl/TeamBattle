@@ -1,6 +1,3 @@
-using System.Dynamic;
-using System.Security.Cryptography.X509Certificates;
-
 namespace TeamBattle
 {
     public class Spieler
@@ -14,16 +11,20 @@ namespace TeamBattle
             return Lebenspunkte;
         }
 
-        public void Attack(Spieler target)
+        public int Attack(Spieler target, int damage)
         {   
-            
+            return 0;
         }
 
         public void takeDamage(int Schaden)
         {
             Lebenspunkte = Lebenspunkte - Schaden;
         }
-
+        
+        public void avoidAttack()
+        {
+            
+        }
         public void useFaehigkeit()
         {
                    

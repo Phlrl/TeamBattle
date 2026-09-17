@@ -1,10 +1,7 @@
-using System.Security.Cryptography.X509Certificates;
-
 namespace TeamBattle
 {
     public abstract class Faehigkeit
     {
-        protected int Schaden = 0; 
     }
 
     class Heilen:Faehigkeit
@@ -22,10 +19,12 @@ namespace TeamBattle
 
     class StarkerAngriff : Faehigkeit
     {
+        protected int Schaden = 0; 
+
         public StarkerAngriff()
         {
-            
         }
+
     }
 
     class Schnelligkeit : Faehigkeit

@@ -13,27 +13,29 @@ namespace TeamBattle
             TeamListe.Add(Player);
         }
 
-        public void checkPlayerAlive(List<Spieler> TeamListe)
+        public bool areAllPlayersAlive()
         {
-            int count = 0;
-            foreach (var Spieler in TeamListe)
+            foreach (var s in TeamListe)
             {
-                if (count != 0)
+                if(s.getLebenspunkte() == 0)
                 {
-                    Console.WriteLine("Es gibt noch Spieler");
-                }
-
-                else
-                {
-                    Console.WriteLine("Es sind keine Spieler vorhanden");
+                    return false;
                 }
             }
-          
+            return true;
         }
 
         public int PlayerAlive()
         {
-            return ;
+            int lebendigeSpieler = 0;
+            foreach (var s in TeamListe)
+            {
+                if (s.getLebenspunkte() != 0)
+                {
+                    lebendigeSpieler ++;
+                }
+            }
+            return lebendigeSpieler;
         }
     }
 }
