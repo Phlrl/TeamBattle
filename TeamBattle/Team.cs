@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace TeamBattle
 {
-    public class Teams
+    public class Team
     {
         string TeamName;
         List<Spieler>TeamListe = new List<Spieler>();

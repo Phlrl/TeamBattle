@@ -1,0 +1,4 @@
+<Solution>
+    <Project Path="TeamBattle.Tests/TeamBattle.Tests.csproj" />
+    <Project Path="TeamBattle/TeamBattle.csproj" />
+</Solution>

@@ -11,6 +11,11 @@ namespace TeamBattle
             return Lebenspunkte;
         }
 
+        public void setLebenspunkte(int L)
+        {
+            Lebenspunkte = L;
+        }
+
         public int Attack(Spieler target, int damage)
         {   
             return 0;
