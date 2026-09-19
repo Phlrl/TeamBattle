@@ -2,7 +2,7 @@ namespace TeamBattle
 {
     public abstract class Waffe
     {
-         protected int Schaden = 0; 
+         protected int WaffenSchaden = 0; 
          protected string WeaponName;
     }
     class Pistole:Waffe
@@ -11,7 +11,7 @@ namespace TeamBattle
         public Pistole()
         {
             WeaponName = "Pistol";
-            Schaden = 20;
+            WaffenSchaden = 20;
         }
     }
 
@@ -20,7 +20,7 @@ namespace TeamBattle
         public Gewehr()
         {
             WeaponName = "Rifle";
-            Schaden = 30;
+            WaffenSchaden = 30;
         }
     }
 
@@ -29,7 +29,7 @@ namespace TeamBattle
         public Schrotflinte()
         {
             WeaponName = "Shotgun";
-            Schaden = 40;
+            WaffenSchaden = 40;
         }
     }
 }

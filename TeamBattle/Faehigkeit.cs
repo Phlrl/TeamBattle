@@ -1,6 +1,6 @@
 namespace TeamBattle
 {
-    public abstract class Faehigkeit
+    public abstract class Faehigkeit:Waffe
     {
     }
 
@@ -23,7 +23,8 @@ namespace TeamBattle
 
         public StarkerAngriff()
         {
-        }
+            WaffenSchaden = WaffenSchaden + 20;
+        }   
 
     }
 
