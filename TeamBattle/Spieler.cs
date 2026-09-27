@@ -1,6 +1,3 @@
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-
 namespace TeamBattle
 {
     public class Spieler
@@ -9,7 +6,7 @@ namespace TeamBattle
         private int Lebenspunkte = 100;
         private Faehigkeit faehigkeit;
         private Waffe waffe;
-        public List<Spieler> TargetPlayer = new List<Spieler>();
+
         public int getLebenspunkte()
         {
             return Lebenspunkte;
@@ -20,35 +17,38 @@ namespace TeamBattle
             Lebenspunkte = L;
         }
 
-        public bool attack(Spieler target, int damage)
-        {   
-
+        public static bool Attack(Spieler target, int damage, List<Spieler> TargetPlayer)
+        {
             foreach (var s in TargetPlayer)
             {
-                if(s = target)
+                if (s == target)
                 {
+                    s.takeDamage(damage);
                     return true;
-                }
-                else
-                {
-                    return false;
                 }
             }
 
+            return false;
         }
 
         public void takeDamage(int Schaden)
         {
             Lebenspunkte = Lebenspunkte - Schaden;
         }
-        
-        public bool avoidAttack()
+
+        public bool avoidAttack(List<Spieler> TargetPlayer)
         {
-            if (Spieler = )
+            foreach (var s in TargetPlayer)
             {
-                return true;
+                if (s == this)
+                {
+                    return true;
+                }
             }
+
+            return false;
         }
+
         public void useFaehigkeit()
         {
             
